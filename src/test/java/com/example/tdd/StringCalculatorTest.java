@@ -32,4 +32,25 @@ public class StringCalculatorTest {
         //then
         Assertions.assertEquals(3,result);
     }
+
+    @Test
+    void givenNumbersWithNewLineSeparatorWhenAddTheReturnSumOK(){
+        String nums = "1,2\\n3";
+        //when
+        Integer result = stringCalculator.add(nums);
+        //then
+        Assertions.assertEquals(6,result);
+    }
+
+    @Test
+    void givenNumbersWithWrongLineSeparatorWhenAddThenError(){
+        String nums = "2,\\n3";
+        //when
+        //then
+        Assertions.assertThrows(NumberFormatException.class, () -> {
+            stringCalculator.add(nums);
+        });
+    }
+
+
 }

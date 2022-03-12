@@ -4,8 +4,9 @@ import java.util.Arrays;
 
 public class StringCalculator {
     public Integer add(String s) {
-        Integer result = 0;
+        int result = 0;
         if (!s.isEmpty()){
+            s = s.replace("\\n",",");
             String[] listNumbers = s.split(",");
             result =  Arrays.stream(listNumbers)
                     .mapToInt(Integer::parseInt)
