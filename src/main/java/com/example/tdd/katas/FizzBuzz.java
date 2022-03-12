@@ -1,7 +1,7 @@
 package com.example.tdd.katas;
 
 //@Service
-public class KataOne {
+public class FizzBuzz {
 
 
     public String fizzBuzz(Integer number){

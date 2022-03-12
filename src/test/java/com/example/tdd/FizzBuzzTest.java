@@ -1,7 +1,7 @@
 package com.example.tdd;
 
 
-import com.example.tdd.katas.KataOne;
+import com.example.tdd.katas.FizzBuzz;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -9,11 +9,11 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FizzBuzzTest {
 
-    KataOne kataOne;
+    FizzBuzz kataOne;
 
     @BeforeEach
     public void before(){
-        kataOne = new KataOne();
+        kataOne = new FizzBuzz();
     }
 
     @Test
